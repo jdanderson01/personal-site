@@ -15,76 +15,66 @@
       <header class="main-header"><h1>Proxmox Homelab</h1></header>
 
       <section class="projects">
+
         <article class="log-entry">
-          <h3>🧱 Initial Setup <span class="log-date">March 2025</span></h3>
+          <h3>Initial Setup <span class="log-date">March 2025</span></h3>
           <ul>
-            <li>Installed <strong>Proxmox VE</strong> on a Beelink mini PC.</li>
-            <li>Connected to Wi-Fi manually using <code>wpa_supplicant</code> on Ubuntu Server 24.04 LTS.</li>
-            <li>Planned to self-host small services like media storage and internal tools.</li>
+            <li>Installed <strong>Proxmox VE</strong> on a Beelink mini PC to kick off a lightweight homelab.</li>
+            <li>Configured Wi-Fi manually using <code>wpa_supplicant</code> on Ubuntu Server 24.04 LTS.</li>
+            <li>The goal was to self-host a handful of useful tools and services for daily use and learning.</li>
           </ul>
         </article>
 
         <article class="log-entry">
-            <article class="log-entry">
-                <h3>📦 Service Deployment <span class="log-date">March 2025</span></h3>
-                <ul>
-                  <li>Installed and configured <strong>AdGuard Home</strong> on a local container to block ads and trackers network-wide.</li>
-                  <li>Pointed router’s DNS settings to the AdGuard container, making it the primary DNS for all devices in the home network.</li>
-                  <li>Set up <strong>Plex Media Server</strong> to host and stream personal media across devices in the home.</li>
-                  <li>Enabled local network discovery for Plex and ensured storage was mounted for media access.</li>
-                  <li>Tested accessibility of both services from multiple devices on the LAN.</li>
-                  <li>Planning to add a web dashboard or reverse proxy for centralized access.</li>
-                </ul>
-              </article>
-              
-              <article class="log-entry">
-                <h3>🤖 Discord Bot Deployment <span class="log-date">April 2025</span></h3>
-                <ul>
-                  <li>Created a dedicated LXC container in Proxmox for the Discord bot project.</li>
-                  <li>Installed <strong>Node.js v20</strong> using <code>nvm</code> to support modern JavaScript features.</li>
-                  <li>Cloned bot source code from a GitHub repo and set up the environment using <code>.env</code>.</li>
-                  <li>Configured and launched the bot using <code>pm2</code> to keep it running in the background 24/7.</li>
-                  <li>Registered a global slash command <code>/randomplayer</code> to return a random NBA roleplayer.</li>
-                  <li>Enabled the bot to auto-start on reboot with PM2 + systemd integration.</li>
-                </ul>
-              </article>
+          <h3>AdGuard Home Setup <span class="log-date">March 2025</span></h3>
+          <ul>
+            <li>Deployed <strong>AdGuard Home</strong> in an LXC container to handle network-wide ad and tracker blocking.</li>
+            <li>Configured DNS redirection at the router level so all devices use AdGuard as their primary resolver.</li>
+            <li>Basic statistics and filtering rules help keep the home network a little quieter and faster.</li>
+          </ul>
+        </article>
 
-              <article class="log-entry">
-                <h3>🖼️ Immich Photo Hosting <span class="log-date">April 2025</span></h3>
-                <ul>
-                  <li>Deployed <strong>Immich</strong> in a new LXC container on Proxmox to serve as a self-hosted photo backup and gallery app.</li>
-                  <li>Installed <strong>Docker</strong> and <strong>Docker Compose v2</strong> to handle Immich's multi-service architecture.</li>
-                  <li>Configured persistent storage paths for uploads and Postgres DB using the <code>.env</code> file.</li>
-                  <li>Resolved compatibility issues by switching to a Postgres image with <code>pgvecto.rs</code> support.</li>
-                  <li>Mapped port <code>2283</code> for external access and tested from both browser and phone app.</li>
-                  <li>Cleaned up disk space and resized LXC storage after hitting usage limits during Docker setup.</li>
-                  <li>Confirmed successful photo sync and mobile access using the official Immich app.</li>
-                </ul>
-              </article>              
+        <article class="log-entry">
+          <h3>Discord Bot Container <span class="log-date">April 2025</span></h3>
+          <ul>
+            <li>Created a dedicated LXC container to run a custom Discord bot 24/7.</li>
+            <li>Installed <strong>Node.js v20</strong> via <code>nvm</code> and cloned the bot's repo from GitHub.</li>
+            <li>Used <code>.env</code> to manage API keys and secrets, then launched the bot with <code>pm2</code>.</li>
+            <li>The bot serves simple commands like <code>/randomplayer</code> and is monitored for uptime and logs.</li>
+          </ul>
+        </article>
 
-              <article class="log-entry">
-                <h3>🧩 Planned Features & Add-ons <span class="log-date">[Planned]</span></h3>
-                <ul>
-                  <li>Host personal websites and portfolio projects directly from the homelab using lightweight web servers or reverse proxy routing.</li>
-                  <li>Implement scheduled snapshots and backup automation for critical services and configurations.</li>
-                  <li>Experiment with self-hosted dashboards to monitor resource usage, service status, and system health.</li>
-                  <li>Consider learning automation tools like <strong>Ansible</strong> to manage VM/container provisioning and system updates.</li>
-                </ul>
-              </article>
-              
+        <article class="log-entry">
+          <h3>Nextcloud LXC Setup <span class="log-date">April 2025</span></h3>
+          <ul>
+            <li>Installed <strong>Nextcloud</strong> in its own container to create a personal cloud file system.</li>
+            <li>Mounted external storage for photo and document syncing across devices.</li>
+            <li>Enabled WebDAV and tested uploads/downloads from desktop and mobile apps.</li>
+          </ul>
+        </article>
+
+        <article class="log-entry">
+          <h3>Jellyfin VM Deployment <span class="log-date">August 2025</span></h3>
+          <ul>
+            <li>Set up a new VM running Ubuntu Server and installed <strong>Jellyfin</strong> for local media streaming.</li>
+            <li>Mounted an existing TV show directory containing downloaded content like <code>Home Movies</code>.</li>
+            <li>Configured Tailscale for private, secure remote access to the Jellyfin web UI on mobile.</li>
+            <li>Added the library via the GUI and verified media playback on LAN and phone.</li>
+          </ul>
+        </article>
 
         <p class="sub-header-text">
           Back to <a href="../index.html">home</a> or <a href="projects.html">all projects</a>.
         </p>
       </section>
-      <footer>
-  <p class="footer-links">
-    <a href="https://github.com/jdanderson01" target="_blank" rel="noopener">GitHub</a> |
-    <a href="https://www.behance.net/juicetray" target="_blank" rel="noopener">Behance</a> |
-    <a href="/pages/about-career.html">About My Work</a>
-  </p>
-</footer>
 
+      <footer>
+        <p class="footer-links">
+          <a href="https://github.com/jdanderson01" target="_blank" rel="noopener">GitHub</a> |
+          <a href="https://www.behance.net/juicetray" target="_blank" rel="noopener">Behance</a> |
+          <a href="/pages/about-career.html">About My Work</a>
+        </p>
+      </footer>
     </main>
   </body>
 </html>
