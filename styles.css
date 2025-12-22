@@ -9,11 +9,6 @@ html, body {
 }
 
 body {
-  background-image: url("black-orchid.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
   color: var(--pico-color);
   font-family: Arial, sans-serif;
   font-size: 1rem;
@@ -46,15 +41,53 @@ a:hover {
   text-decoration: underline;
 }
 
-.log-entry {
-  margin-bottom: 3rem;
+.projects {
+  position: relative;
+  padding-left: 2.25rem;
 }
 
-.log-date {
-  font-size: 0.9rem;
-  font-weight: normal;
-  color: var(--pico-muted-color);
-  margin-left: 0.5rem;
+.projects::before {
+  content: "";
+  position: absolute;
+  left: 0.9rem;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+.log-entry {
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+
+.log-entry::before {
+  content: "";
+  position: absolute;
+  left: -1.52rem;
+  top: 1.35rem;   
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.log-entry:first-of-type::before {
+  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.learn-more {
+  margin-left: 1.25rem;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.learn-more a {
+  font-weight: 600;
 }
 
 .narrow-text {
