@@ -18,50 +18,76 @@
 
         <article class="log-entry">
           <h3>Initial Setup <span class="log-date">March 2025</span></h3>
-          <ul>
-            <li>Installed <strong>Proxmox VE</strong> on a Beelink mini PC to kick off a lightweight homelab.</li>
-            <li>Configured Wi-Fi manually using <code>wpa_supplicant</code> on Ubuntu Server 24.04 LTS.</li>
-            <li>The goal was to self-host a handful of useful tools and services for daily use and learning.</li>
-          </ul>
+            <ul>
+              <li>Installed <strong>Proxmox VE</strong> on a Beelink mini PC to kick off a lightweight homelab.</li>
+              <li>Configured Wi-Fi manually using <code>wpa_supplicant</code> on Ubuntu Server 24.04 LTS.</li>
+              <li>The goal was to self-host a handful of useful tools and services for daily use and learning.</li>
+            </ul>
         </article>
 
         <article class="log-entry">
           <h3>AdGuard Home Setup <span class="log-date">March 2025</span></h3>
-          <ul>
-            <li>Deployed <strong>AdGuard Home</strong> in an LXC container to handle network-wide ad and tracker blocking.</li>
-            <li>Configured DNS redirection at the router level so all devices use AdGuard as their primary resolver.</li>
-            <li>Basic statistics and filtering rules help keep the home network a little quieter and faster.</li>
-          </ul>
+            <ul>
+              <li>Deployed <strong>AdGuard Home</strong> in an LXC container to handle network-wide ad and tracker blocking.</li>
+              <li>Configured DNS redirection at the router level so all devices use AdGuard as their primary resolver.</li>
+              <li>Basic statistics and filtering rules help keep the home network a little quieter and faster.</li>
+            </ul>
         </article>
 
         <article class="log-entry">
           <h3>Discord Bot Container <span class="log-date">April 2025</span></h3>
-          <ul>
-            <li>Created a dedicated LXC container to run a custom Discord bot 24/7.</li>
-            <li>Installed <strong>Node.js v20</strong> via <code>nvm</code> and cloned the bot's repo from GitHub.</li>
-            <li>Used <code>.env</code> to manage API keys and secrets, then launched the bot with <code>pm2</code>.</li>
-            <li>The bot serves simple commands like <code>/randomplayer</code> and is monitored for uptime and logs.</li>
-          </ul>
+            <ul>
+              <li>Created a dedicated LXC container to run a custom Discord bot 24/7.</li>
+              <li>Installed <strong>Node.js v20</strong> via <code>nvm</code> and cloned the bot's repo from GitHub.</li>
+              <li>Used <code>.env</code> to manage API keys and secrets, then launched the bot with <code>pm2</code>.</li>
+              <li>The bot serves simple commands like <code>/randomplayer</code> and is monitored for uptime and logs.</li>
+            </ul>
         </article>
 
         <article class="log-entry">
           <h3>Nextcloud LXC Setup <span class="log-date">April 2025</span></h3>
-          <ul>
-            <li>Installed <strong>Nextcloud</strong> in its own container to create a personal cloud file system.</li>
-            <li>Mounted external storage for photo and document syncing across devices.</li>
-            <li>Enabled WebDAV and tested uploads/downloads from desktop and mobile apps.</li>
-          </ul>
+            <ul>
+              <li>Installed <strong>Nextcloud</strong> in its own container to create a personal cloud file system.</li>
+              <li>Mounted external storage for photo and document syncing across devices.</li>
+              <li>Enabled WebDAV and tested uploads/downloads from desktop and mobile apps.</li>
+            </ul>
         </article>
 
         <article class="log-entry">
           <h3>Jellyfin VM Deployment <span class="log-date">August 2025</span></h3>
-          <ul>
-            <li>Set up a new VM running Ubuntu Server and installed <strong>Jellyfin</strong> for local media streaming.</li>
-            <li>Mounted an existing TV show directory containing downloaded content like <code>Home Movies</code>.</li>
-            <li>Configured Tailscale for private, secure remote access to the Jellyfin web UI on mobile.</li>
-            <li>Added the library via the GUI and verified media playback on LAN and phone.</li>
-          </ul>
+            <ul>
+              <li>Set up a new VM running Ubuntu Server and installed <strong>Jellyfin</strong> for local media streaming.</li>
+              <li>Mounted an existing TV show directory containing downloaded content like <code>Home Movies</code>.</li>
+              <li>Configured Tailscale for private, secure remote access to the Jellyfin web UI on mobile.</li>
+              <li>Added the library via the GUI and verified media playback on LAN and phone.</li>
+            </ul>
         </article>
+
+        <article class="log-entry">
+          <h3>Active Directory Lab Environment <span class="log-date">December 2025</span></h3>
+            <ul>
+              <li>Provisioned a Windows Server VM to practice <strong>Active Directory</strong> concepts in a controlled lab environment.</li>
+              <li>Configured a basic domain setup to explore users, groups, authentication flow, and Windows network management.</li>
+              <li>Used the lab to reinforce IT fundamentals like DNS dependencies, domain-joined clients, and admin workflows.</li>
+            </ul>
+          <p class="learn-more">
+            <a href="active-directory-lab.html">Learn more →</a>
+          </p>
+        </article>
+
+        <article class="log-entry">
+          <h3>Printer Deployment & Troubleshooting Lab <span class="log-date">December 2025</span></h3>
+            <ul>
+              <li>Simulated printer deployment by installing and sharing a printer in Windows, then connecting from another device.</li>
+              <li>Practiced troubleshooting issues such as failed test prints, driver or port mismatches, and sharing permissions.</li>
+              <li>Documented a repeatable workflow for printer setup and diagnosis aligned with A+ and entry-level IT scenarios.</li>
+            </ul>
+          <p class="learn-more">
+            <a href="printer-lab.html">Learn more →</a>
+          </p>
+        </article>
+
+
 
         <p class="sub-header-text">
           Back to <a href="../index.html">home</a> or <a href="projects.html">all projects</a>.
